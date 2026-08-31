@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>João — Full-Stack Developer | Terminal</title>
+    <meta
+      name="description"
+      content="Portfolio of João, a full-stack developer and second-year Computer Science student: a terminal-booted workspace leading to a project graph and an about section."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/base.css" />
+    <link rel="stylesheet" href="./assets/terminal.css" />
+    <link rel="stylesheet" href="./assets/interactive.css" />
+    <link rel="stylesheet" href="./assets/shell.css" />
+  </head>
+  <body class="scanlines noise">
+    <!-- BOOT -->
+    <div id="boot">
+      <div class="boot-box">
+        <div class="bar"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i></div>
+        <div id="bootlog"></div><span class="caret"></span>
+        <div class="boot-progress"><i id="bootbar"></i></div>
+        <div class="boot-skip">click anywhere, or press ENTER, to skip</div>
+      </div>
+    </div>
+
+
+    <!-- DESKTOP -->
+    <main id="desktop">
+      <div class="topbar">
+        <span class="brand">JOAO@KALI</span>
+        <span>Files</span><span>Terminal</span><span>Network</span><span>Help</span>
+        <span class="spacer"></span>
+        <span>eth0 ▲ 12.4 MB/s</span>
+        <span id="clock">00:00:00</span>
+      </div>
+
+      <section class="win w1">
+        <div class="wbar">— zsh — recon</div>
+        <pre></pre>
+      </section>
+      <section class="win w2">
+        <div class="wbar">— nvim — stack.ts</div>
+        <pre></pre>
+      </section>
+      <section class="win w3">
+        <div class="wbar">— htop — resources</div>
+        <pre></pre>
+      </section>
+      <section class="win w4">
+        <div class="wbar">— zsh — git</div>
+        <pre></pre>
+      </section>
+
+      <a class="side side-left" href="./projects.html">
+        <div class="k">◄ NODE 01</div>
+        <div class="t">Projects</div>
+        <div class="d">Enter the graph. Every synapse is something I built or am building.</div>
+        <div class="arrow">←</div>
+      </a>
+
+      <a class="side side-right" href="./about.html">
+        <div class="k">NODE 02 ►</div>
+        <div class="t">About me</div>
+        <div class="d">The clean version: story, skills, education.</div>
+        <div class="arrow">→</div>
+      </a>
+
+      <div class="core">
+        <article class="card">
+          <div class="tag">session established</div>
+          <h1>Hi, I'm <span>João</span></h1>
+          <div class="role">Full-Stack Developer &amp; CS Student</div>
+          <p>
+            Full-stack developer and second-year Computer Science student with hands-on
+            experience in end-to-end web development — defining the architecture, choosing the
+            stack, and owning everything from backend logic to data persistence. Strong interest
+            in cybersecurity, infrastructure and software engineering.
+          </p>
+          <div class="chips">
+            <span class="chip">Java</span><span class="chip">Spring Boot</span>
+            <span class="chip">React</span><span class="chip">TypeScript</span>
+            <span class="chip">PostgreSQL</span><span class="chip">Rust</span>
+            <span class="chip">Linux</span>
+          </div>
+          <div class="prompt">joao@portfolio:~$ press <b>T</b> for a real shell — ← projects · about →</div>
+        </article>
+      </div>
+
+      <!-- interactive shell -->
+      <section id="shell">
+        <div class="sbar">
+          <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
+          <span class="title">joao@kali: ~ — joao-sh</span>
+          <span class="x">✕</span>
+        </div>
+        <div id="shellbody"></div>
+        <div class="sline">
+          <span class="ps1">joao@kali:~$</span>
+          <input id="shellinput" autocomplete="off" spellcheck="false" aria-label="terminal input" />
+        </div>
+      </section>
+
+      <div class="dock">
+        <button data-dock="shell"><b>⌘</b> terminal</button>
+        <button data-dock="projects">projects</button>
+        <button data-dock="about">about</button>
+        <button data-dock="matrix">matrix</button>
+        <button data-dock="theme">theme</button>
+      </div>
+
+      <div class="taskbar">
+        <span>◍ 4 workspaces</span><span>load 0.42 0.31 0.28</span>
+        <span>T · terminal &nbsp;|&nbsp; M · matrix &nbsp;|&nbsp; ENTER · skip boot &nbsp;|&nbsp; ↑↑↓↓←→←→BA</span>
+      </div>
+    </main>
+
+    <script src="./assets/interactive.js"></script>
+    <script src="./assets/terminal.js"></script>
+    <script src="./assets/shell.js"></script>
+  </body>
+
+</html>

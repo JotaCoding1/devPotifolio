@@ -1,0 +1,91 @@
+/* ---------- Shared interactive layer ---------- */
+
+/* custom cursor glow */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 340px;
+  height: 340px;
+  margin: -170px 0 0 -170px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+  background: radial-gradient(circle, rgba(87, 255, 176, 0.1), transparent 62%);
+  transition: opacity 0.4s ease;
+  will-change: transform;
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+  border-radius: 50%;
+  background: var(--term, #57ffb0);
+  box-shadow: 0 0 12px rgba(87, 255, 176, 0.9);
+  pointer-events: none;
+  z-index: 9997;
+  will-change: transform;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  margin: -17px 0 0 -17px;
+  border-radius: 50%;
+  border: 1px solid rgba(87, 255, 176, 0.45);
+  pointer-events: none;
+  z-index: 9997;
+  transition: width 0.22s, height 0.22s, margin 0.22s, border-color 0.22s, opacity 0.3s;
+  will-change: transform;
+}
+
+.cursor-ring.hot {
+  width: 56px;
+  height: 56px;
+  margin: -28px 0 0 -28px;
+  border-color: var(--violet, #a877ff);
+}
+
+@media (hover: none), (max-width: 1024px) {
+  .cursor-glow, .cursor-dot, .cursor-ring { display: none; }
+}
+
+/* matrix rain easter egg */
+#matrix {
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+#matrix.on { opacity: 1; }
+
+/* toast */
+.toast {
+  position: fixed;
+  bottom: 46px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  padding: 9px 16px;
+  font-family: var(--mono, monospace);
+  font-size: 12px;
+  color: #57ffb0;
+  border: 1px solid rgba(87, 255, 176, 0.35);
+  background: rgba(4, 12, 10, 0.94);
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 9995;
+}
+
+.toast.on { opacity: 1; transform: translateX(-50%) translateY(0); }
